@@ -1,6 +1,6 @@
-// 2bfd37d5d2aa41c253c3db29c2f30228
 // https://api.openweathermap.org/data/2.5/forecast?q=Longmont&appid=2bfd37d5d2aa41c253c3db29c2f30228
 
+var apiKey = "2bfd37d5d2aa41c253c3db29c2f30228";
 var searchBtn = document.querySelector('.search-btn');
 var input = document.querySelector('#search-input');
 

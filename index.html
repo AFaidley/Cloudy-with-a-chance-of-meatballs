@@ -20,9 +20,86 @@
             placeholder="Search City"
           />
         </form>
+        <p>Search History:</p>
+        <ul id="history" class="col-8 mb-3 text-info"></ul>
+        <button id="clear">Clear search</button>
+
         <button class="search-btn">Search</button>
-        
       </section>
+
+      <section>
+      <div class="col-12 col-md-9 p-3 text-light cityWeather">
+        <div id="result-content"></div>
+        <h2 id="currentSearch"></h2>
+        <div class="day0"></div>
+        <ul class="col-8 mb-3 text-info"></ul>
+        <section id="weather-today">
+            <h3>Today's Forecast:</h3>
+            <table class="card-body table mx-auto my-4 text-info" style="border-color:white;">
+                <tbody id="forecast-table" class="mx-auto"></tbody>
+                <tr>
+                    <th><img id="pic0"></img></th>
+                </tr>
+                <tr>
+                    <th id="temp0"></th>
+                </tr>
+                <tr>
+                    <th id="wind0"></th>
+                </tr>
+                <tr>
+                    <th id="humdity0"></th>
+                </tr>
+                <tr>
+                    <th id="uvIndex0"></th>
+                </tr>
+            </table>
+        </section>
+        <section id="weather-forecast">
+            <h3>5-Day Forecast:</h3>
+            <table class="card-body table mx-auto my-4 text-info" style="border-color:white;">
+                <tbody id="forecast-table" class="mx-auto"></tbody>
+                <tr>
+                    <th>Date</th>
+                    <th id="day1"></th>
+                    <th id="day2"></th>
+                    <th id="day3"></th>
+                    <th id="day4"></th>
+                    <th id="day5"></th>
+                </tr>
+                <tr>
+                    <th>Conditions</th>
+                    <th><img id="pic1"></img></th>
+                    <th><img id="pic2"></img></th>
+                    <th><img id="pic3"></img></th>
+                    <th><img id="pic4"></img></th>
+                    <th><img id="pic5"></img></th>
+                </tr>
+                <tr>
+                    <th>Temperature</th>
+                    <th id="temp1"></th>
+                    <th id="temp2"></th>
+                    <th id="temp3"></th>
+                    <th id="temp4"></th>
+                    <th id="temp5"></th>
+                </tr>
+                <tr>
+                    <th>Surface Winds</th>
+                    <th id="wind1"></th>
+                    <th id="wind2"></th>
+                    <th id="wind3"></th>
+                    <th id="wind4"></th>
+                    <th id="wind5"></th>
+                </tr>
+                <tr>
+                    <th>Humidity</th>
+                    <th id="humdity1"></th>
+                    <th id="humdity2"></th>
+                    <th id="humdity3"></th>
+                    <th id="humdity4"></th>
+                    <th id="humdity5"></th>
+                </tr>
+            </table>
+          </section>
     </main>
     <script src="./assets/js/script.js"></script>
   </body>
