@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(149, 187, 211) ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+
+input::placeholder{
+    color: rgb(0, 0, 65);
+  }
