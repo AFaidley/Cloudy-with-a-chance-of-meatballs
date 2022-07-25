@@ -9,6 +9,7 @@ var currentDate = moment().format("l");
 var uviColor = document.getElementById("current-uvindex");
 var currentSearch = document.getElementById("current-search");
 var iconOne = document.getElementById("icon1");
+var currentUvindex = document.getElementById("current-uvindex");
 var cities = [];
 
 function start() {
@@ -50,7 +51,21 @@ searchBtn.addEventListener("click", function (event) {
         .then((data) => {
           document.getElementById("current-uvindex").textContent =
             "UV Index: " + data.current.uvi + " ";
+          // Setting color for uv index
+          var uviColor = data.current.uvi;
+          if (uviColor <= 2) {
+            currentUvindex.setAttribute("class", "uviMinimal");
+          } else if (uviColor > 2 && uviColor <= 5) {
+            currentUvindex.setAttribute("class", "uviLow");
+          } else if (uviColor > 5 && uviColor <= 7) {
+            currentUvindex.setAttribute("class", "uviModerate");
+          } else if (uviColor > 7 && uviColor <= 10) {
+            currentUvindex.setAttribute("class", "uviHigh");
+          } else {
+            currentUvindex.setAttribute("class", "uvExtreme");
+          }
         });
+
       // Weather Forecast for current day
       document.getElementById(
         "current-pic"
@@ -73,7 +88,7 @@ searchBtn.addEventListener("click", function (event) {
       document.getElementById("day5").textContent = day5;
 
       for (var i = 1; i < 6; i++) {
-        //Automatically update the 5day forecast with having to call each day separately
+        //Automatically, using a for loop,  update the 5day forecast without having to call each day separately
         var icons = document.getElementById("pic" + [i]);
         var temp = document.getElementById("temp" + [i]);
         var wind = document.getElementById("wind" + [i]);
