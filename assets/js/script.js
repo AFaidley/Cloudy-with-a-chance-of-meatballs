@@ -26,8 +26,6 @@ searchBtn.addEventListener("click", function (event) {
     })
     .then((data) => {
       console.log(data);
-      // var searchIcon = data.list[0].weather[0].icon;
-      // var searchCity = data.city.name;
       var searchLat = data.city.coord.lat;
       var searchLon = data.city.coord.lon;
       // 5day forecast vars for textContent add later
@@ -119,7 +117,7 @@ searchBtn.addEventListener("click", function (event) {
   li.addEventListener("click", function () {
     var searchHistoryInput = this.textContent;
     // console.log(searchHistoryInput);
-    // Copyied and pasted entire fetch from above to print weather info to page again
+    // Copied and pasted entire fetch from above to print weather info to page again
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${searchHistoryInput}&appid=${apiKey}&units=imperial&appid=2bfd37d5d2aa41c253c3db29c2f30228`
     )
@@ -129,8 +127,6 @@ searchBtn.addEventListener("click", function (event) {
       })
       .then((data) => {
         console.log(data);
-        // var searchIcon = data.list[0].weather[0].icon;
-        // var searchCity = data.city.name;
         var searchLat = data.city.coord.lat;
         var searchLon = data.city.coord.lon;
         // 5day forecast vars for textContent add later
