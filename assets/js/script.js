@@ -2,6 +2,7 @@
 
 var apiKey = "2bfd37d5d2aa41c253c3db29c2f30228";
 var searchBtn = document.querySelector(".search-btn");
+var clearBtn = document.getElementById("clear-btn");
 var input = document.getElementById("search-input");
 var currentWeather = document.getElementById("current-weather");
 var fiveDay = document.getElementById("5day-forecast");
@@ -11,11 +12,6 @@ var currentSearch = document.getElementById("current-search");
 var iconOne = document.getElementById("icon1");
 var currentUvindex = document.getElementById("current-uvindex");
 var cities = [];
-
-function start() {
-  currentWeather.setAttribute("class", "hide");
-  fiveDay.setAttribute("class", "hide");
-}
 
 searchBtn.addEventListener("click", function (event) {
   // console.log(input.value);
@@ -62,7 +58,7 @@ searchBtn.addEventListener("click", function (event) {
           } else if (uviColor > 7 && uviColor <= 10) {
             currentUvindex.setAttribute("class", "uviHigh");
           } else {
-            currentUvindex.setAttribute("class", "uvExtreme");
+            currentUvindex.setAttribute("class", "uviExtreme");
           }
         });
 
@@ -107,6 +103,33 @@ searchBtn.addEventListener("click", function (event) {
         humdity.textContent = data.list[i].main.humidity + " %";
       }
     });
-});
 
-// start();
+    cities.push(input.value);
+    localStorage.setItem("cities", JSON.stringify(cities));  
+    var cityArr = JSON.parse(localStorage.getItem("cities"));
+
+    var history = document.getElementById("history");
+    var li = document.createElement("button");
+    var city = cityArr.length - 1
+
+    li.setAttribute("class", "btn-secondary m-2")
+    li.textContent = cityArr[city]
+    history.appendChild(li);
+
+    li.addEventListener("click", function() {
+      var searchHistoryInput = this.textContent;
+      // console.log(searchHistoryInput);
+
+     var event= `https://api.openweathermap.org/data/2.5/forecast?q=${searchHistoryInput}&appid=${apiKey}&units=imperial&appid=2bfd37d5d2aa41c253c3db29c2f30228`
+    
+
+    });
+// Clear search history function and reload page automatically
+    function clearHistory() {
+      window.localStorage.clear();
+      window.location.reload();
+    }
+
+    // Call functions
+    clearBtn.addEventListener("click", clearHistory);
+});
