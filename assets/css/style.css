@@ -12,3 +12,7 @@ body {
 input::placeholder{
     color: rgb(0, 0, 65);
   }
+
+  .hide {
+    display: none;
+  }
