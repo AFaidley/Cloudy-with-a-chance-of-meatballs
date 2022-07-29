@@ -66,10 +66,10 @@ searchBtn.addEventListener("click", function (event) {
       ).src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png`;
       document.getElementById(
         "current-temp"
-      ).textContent = `Temp: ${data.list[0].main.temp} °F`;
+      ).textContent = `Temperature: ${data.list[0].main.temp} °F`;
       document.getElementById(
         "current-wind"
-      ).textContent = `Wind: ${data.list[0].wind.speed} MPH`;
+      ).textContent = `Surface Winds: ${data.list[0].wind.speed} MPH`;
       document.getElementById(
         "current-humdity"
       ).textContent = `Humidity: ${data.list[0].main.humidity} %`;
@@ -167,10 +167,10 @@ searchBtn.addEventListener("click", function (event) {
         ).src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png`;
         document.getElementById(
           "current-temp"
-        ).textContent = `Temp: ${data.list[0].main.temp} °F`;
+        ).textContent = `Temperature: ${data.list[0].main.temp} °F`;
         document.getElementById(
           "current-wind"
-        ).textContent = `Wind: ${data.list[0].wind.speed} MPH`;
+        ).textContent = `Surface Winds: ${data.list[0].wind.speed} MPH`;
         document.getElementById(
           "current-humdity"
         ).textContent = `Humidity: ${data.list[0].main.humidity} %`;
