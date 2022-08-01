@@ -106,6 +106,7 @@ searchBtn.addEventListener("click", function (event) {
   localStorage.setItem("cities", JSON.stringify(cities));
   var cityArr = JSON.parse(localStorage.getItem("cities"));
 
+  // Creates searched city buttons
   var history = document.getElementById("history");
   var li = document.createElement("button");
   var city = cityArr.length - 1;

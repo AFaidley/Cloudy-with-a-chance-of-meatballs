@@ -4,7 +4,8 @@
 
 I created a Weather App which shows users the current forecast for the city that the user enters as well as the 5 day forecast for the chosen city. It will also show the current UV Index and is color coded as per the Aim at Melanoma Foundation UV Index scale.
 
-Link to Deployed Application: ----------------------------------------------------
+Here is a link to my deployed application:
+https://afaidley.github.io/Cloudy-with-a-chance-of-meatballs/
 
 ## Usage
 
